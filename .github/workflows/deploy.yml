@@ -21,4 +21,4 @@ jobs:
         
     - name: Deploy to S3
       run: |
-        aws s3 sync . s3://${bucket_name} --delete --exclude ".git/*" --exclude ".github/*"
+        aws s3 sync . s3://${{ secrets.BUCKET_NAME }} --delete --exclude ".git/*" --exclude ".github/*"
